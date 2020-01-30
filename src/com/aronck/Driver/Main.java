@@ -1,6 +1,6 @@
 package com.aronck.Driver;
 
-public class Main{
+public class Main {
 
 
 }
