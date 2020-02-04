@@ -1,3 +1,5 @@
-name: MC-Server-System
+name: Server_System
 version: 1.0
+authors: [aronck, DrDrThein]
 main: com.aronck.Driver.Main
+commands:
