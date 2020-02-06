@@ -24,27 +24,27 @@ public class Config {
 
     public void addPlayerToFaction(String faction, Player player){
         if(!factionExists(faction))return;
-        config.set("faction." + faction + ".players", config.get("faction." + faction + ".players") + "," + player.getName());
+        config.set(Strings.getFactionsPlayersPath(faction), config.get(Strings.getFactionsPlayersPath(faction)) + "," + player.getName());
     }
 
     public boolean factionExists(String faction){
-        return config.get("faction." + faction)==null;
+        return config.get(Strings.getFactionPath(faction))!=null;
     }
 
     public Player[] getPlayersOfFaction(String faction){
         if(!factionExists(faction))return null;
-        Object[] objects = ((String)(config.get("faction." + faction + ".players"))).split(",");
+        Object[] objects = ((String)(config.get(Strings.getFactionsPlayersPath(faction)))).split(",");
         Player[] players = new Player[objects.length];
         for(int i = 0;i< objects.length;i++) players[i] = (Player)objects[i];
         return players;
     }
 
     public int getNumberOfFactions(){
-        return config.getInt("faction.count");
+        return config.getInt(Strings.FACTIONS_COUNT_PATH);
     }
 
     public void setNumberOfFactions(int count){
-        config.set("faction.count", count);
+        config.set(Strings.FACTIONS_COUNT_PATH, count);
     }
 
     public static void save() {
