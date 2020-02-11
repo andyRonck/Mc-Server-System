@@ -119,6 +119,7 @@ public class FactionCommandListener implements CommandExecutor {
                     }
 
                 }
+                return false;
             }else if(args.length==2){
                 if(args[0].equalsIgnoreCase("create")){
 
@@ -145,6 +146,7 @@ public class FactionCommandListener implements CommandExecutor {
 
                 }
             }
+            return false;
         }
 
         return false;

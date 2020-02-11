@@ -6,7 +6,7 @@ public class Strings {
 
     /***************Messages*****************/
     public static final String NO_PERMISSION = "§3Du hast dazu keine Berechtigung!";
-    public static final String NOTA_PLAYER = "§3Du musst ein Spieler sein um diesen Befehl auszuführen!";
+    public static final String NOTA_PLAYER = "Du musst ein Spieler sein um diesen Befehl auszuführen!";
     public static final String NO_OPEN_INVITATIONS = "§aDu hast keine Faction Invitationen offen!";
     public static final String ALREADY_IN_FACTION = "§aDu bist bereits in einer Faction!";
     public static final String NOT_IN_FACTION = "§aDu bist in keiner Faction";

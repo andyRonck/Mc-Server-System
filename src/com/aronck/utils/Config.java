@@ -40,6 +40,7 @@ public class Config {
 
     public static void deleteFaction(String faction){
 
+        if(faction==null)return;
         String factions = (String)config.get(Strings.getFactionsPlayersPath(faction));
         int index = factions.indexOf(faction);
 
@@ -171,6 +172,7 @@ public class Config {
      * @return String[]
      */
     public static String[] getFactionNames(){
+        if(getFactionsString()==null)return null;
         return getFactionsString().split(",");
     }
 
@@ -192,6 +194,7 @@ public class Config {
      */
     public static String getFactionOfPlayer(Player player){
         String[] factions = getFactionNames();
+        if(factions==null)return null;
         for(int i = 0;i<factions.length;i++){
             Player[] players = getPlayersOfFaction(factions[i]);
             for(int j = 0;j<players.length;i++){
