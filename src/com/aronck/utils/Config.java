@@ -82,6 +82,7 @@ public class Config {
      * @param faction
      */
     public static void removePlayerFromFaction(Player player, String faction){
+        if(faction==null)return;
         String players = (String)config.get(Strings.getFactionsPlayersPath(faction));
         int index = players.indexOf(player.getName());
 
